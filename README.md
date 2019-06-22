@@ -1,5 +1,6 @@
 # TDDwithDjango
 
+## Environment
 sudo apt update
 sudo apt upgrade
 
@@ -14,7 +15,6 @@ pip3 install virtualenv
 virtualenv --version
 
 virtualenv -p python3.6 django
-. django/bin/activate
 
 python3 --version
 
@@ -32,4 +32,9 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install libappindicator1
 sudo apt --fix-broken install 
 
+## Activate/Deactivate virtualenv 
+. django/bin/activate
 deactivate
+
+## django-admin
+django-admin.py startproject superlists 
