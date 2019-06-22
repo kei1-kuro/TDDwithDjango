@@ -3,6 +3,11 @@
 sudo apt update
 sudo apt upgrade
 
+git clone https://XXX
+
+git config --global user.name "kei1"
+git config --global user.email "XXX"
+
 pip3 -V
 
 pip3 install virtualenv
