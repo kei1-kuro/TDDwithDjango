@@ -20,7 +20,7 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get('http://localhost:8080')
         
         # She notices the page title and header mention to-do lists assert 'To-Do' in browser.title
-        self.assertIn('To-do' ,self.browser.title)
+        self.assertIn('To-Do' ,self.browser.title)
         header_text = self.browser.find_element_by_tag_name('h1').text
         self.assertIn('To-Do',header_text)
         
@@ -34,6 +34,11 @@ class NewVisitorTest(unittest.TestCase):
         # She types "Buy peacock feathers" into a text box (Edith's hobby 
         # is tying fly-fishing lures)
         inputbox.send_keys('Buy peacock feathers') 
+        self.assertTrue(
+            any(row.text == '1: Buy peacock feathers' for row in rows),        
+            "New to-do item did not appear in table"    
+        )
+
         
         # When she hits enter, the page updates, and now the page lists 
         # "1: Buy peacock feathers" as an item in a to-do list
